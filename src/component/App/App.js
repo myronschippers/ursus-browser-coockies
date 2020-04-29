@@ -1,10 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import { setCookie, getCookie } from '../../services/cookies.service';
+
 class App extends Component {
     state = {
         enteredCreature: '',
         favoriteCreature: '',
+    }
+
+    componentDidMount() {
+        // when component loads we should load our cookie data...
+        const cookieValue = getCookie('favoriteCreature');
+
+        this.setState({
+            favoriteCreature: cookieValue,
+        })
     }
 
     // tracking what the user enters into the form field
@@ -17,6 +28,9 @@ class App extends Component {
     // Saving the creature entered into the form field to local state
     saveCreature = (event) => {
         const creature = this.state.enteredCreature;
+        // save the entered creature to cookies
+        setCookie('favoriteCreature', creature);
+        setCookie('wizard', 'Timothy');
 
         this.setState({
             enteredCreature: '',
