@@ -18,7 +18,7 @@
 }
 
 .container {
-    max-width: 600px;
+    max-width: 360px;
     padding: 16px;
     margin: 0 auto;
     border: 1px solid rgb(0,0,0,0.1);
@@ -29,4 +29,33 @@
 
 .formField > * + * {
     margin: 8px 0 0;
+}
+
+.formField input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #878787;
+    border-radius: 3px;
+    font-size: 1.1rem;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 15px 0 0;
+    background-color: #1a50ad;
+    border: 1px solid #082658;
+    box-sizing: border-box;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: royalblue;
+    border: 1px solid #082658;
 }

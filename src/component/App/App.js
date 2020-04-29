@@ -31,7 +31,7 @@ class App extends Component {
         if (this.state.favoriteCreature != null
             && this.state.favoriteCreature.length > 0
         ) {
-            myCreature = <h3>Your Favorite Creature: {this.state.favoriteCreature}</h3>
+            myCreature = <h3>Your Favorite Creature: {this.state.favoriteCreature}</h3>;
         }
 
         return (
@@ -46,12 +46,17 @@ class App extends Component {
                         <div>Favorite Fantastic Creature:</div>
                         <input
                             type="text"
-                            placeholder="Animal"
+                            placeholder="Name of creature"
                             value={this.state.enteredCreature}
                             onChange={this.changeFavoriteAnimal}
                         />
                     </label>
-                    <button onClick={this.saveCreature}>Save My Creature</button>
+                    <button
+                        className="btn"
+                        onClick={this.saveCreature}
+                    >
+                        Save My Creature
+                    </button>
                 </div>
             </div>
         );
