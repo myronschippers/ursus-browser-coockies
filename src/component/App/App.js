@@ -31,7 +31,7 @@ class App extends Component {
         if (this.state.favoriteCreature != null
             && this.state.favoriteCreature.length > 0
         ) {
-            myCreature = <h3>Your Favorite Creature: <strong>{this.state.favoriteCreature}</strong></h3>;
+            myCreature = <h3>Your Favorite Creature: {this.state.favoriteCreature}</h3>;
         }
 
         return (
