@@ -6,28 +6,25 @@ class App extends Component {
         enteredCreature: '',
         favoriteCreature: '',
     }
-    
+
+    // tracking what the user enters into the form field
     changeFavoriteAnimal = (event) => {
         this.setState({
             enteredCreature: event.target.value,
         });
     }
 
+    // Saving the creature entered into the form field to local state
     saveCreature = (event) => {
-        // const creature = this.state.enteredCreature;
+        const creature = this.state.enteredCreature;
 
         this.setState({
             enteredCreature: '',
-            // favoriteCreature: creature,
+            favoriteCreature: creature,
         });
     }
 
-    editCreature = (event) => {
-        this.setState({
-            isEditable: true,
-        });
-    }
-
+    // React renders the content to the application view
     render() {
         let myCreature = <h3>You have not chosen a Favorite Creature</h3>;
 
